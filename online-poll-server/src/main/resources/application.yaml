@@ -1,0 +1,39 @@
+## Hibernate Logging
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG
+
+## App Properties
+app:
+    jwtSecret: JWTSuperSecretKey
+    jwtExpirationInMs: 604800000 # 7 days expiration time
+
+## Server Properties
+server:
+    port: 5000
+
+spring:
+
+    ## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+    datasource:
+        initialization-mode: always         # Initialize the datasource with available DDL and DML scripts
+        password:
+        url: jdbc:mysql://localhost:3308/polling_app?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+        username: root
+
+    ## Jackson Properties
+    jackson:
+        serialization:
+            WRITE_DATES_AS_TIMESTAMPS: false
+        time-zone: UTC
+
+    ## Hibernate Properties
+    # The SQL dialect makes Hibernate generate better SQL for the chosen database
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5InnoDBDialect
