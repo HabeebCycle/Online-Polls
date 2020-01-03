@@ -1,0 +1,21 @@
+.app-content {
+  margin-top: 64px;   
+}
+
+.app-footer {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  box-shadow: 0 2px 8px #f0f1f2;
+  z-index: 10;
+  bottom: 0;
+  padding: 0;
+}
+
+.app-footer > p {
+  color:#1890ff;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  margin: auto;
+}
